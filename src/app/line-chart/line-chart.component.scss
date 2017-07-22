@@ -1,0 +1,12 @@
+.chart-line {
+  stroke: red;
+  stroke-width: 1;
+  fill: none;
+}
+
+g.axis g.tick line, g.axis path {
+  fill: none;
+  stroke: grey;
+  stroke-width: 2;
+  shape-rendering: crispEdges;
+}
