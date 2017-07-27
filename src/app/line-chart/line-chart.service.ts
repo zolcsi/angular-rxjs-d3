@@ -8,8 +8,7 @@ export class LineChartService {
 
   createAxisXFunction(canvasWidth: number, numOfTicks: number, dataLength: number): Function {
     const calcX = d3.scaleLinear().domain([0, dataLength]).range([0, canvasWidth]);
-    const back = d3.axisBottom(calcX).ticks(numOfTicks);
-    return back;
+    return d3.axisBottom(calcX).ticks(numOfTicks);
   }
 
   createAxisYFunction(canvasHeight: number, numOfTicks: number, maxYValue: number): Function {

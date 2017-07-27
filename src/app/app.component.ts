@@ -1,21 +1,26 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { NumberService } from './shared/number.service';
-
+import { Component, ViewChild } from '@angular/core';
+import { LineChartComponent } from './line-chart/line-chart.component';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
 
-  constructor(private numberService: NumberService) {
+  @ViewChild(LineChartComponent) lineChartComponent: LineChartComponent;
+  nextNumber: number;
+  chartData: number[] = [];
+
+  onChartUpdate(nextNumber: number) {
+    this.nextNumber = nextNumber;
+    this.chartData.push(nextNumber);
   }
 
-  ngOnInit(): void {
-
+  onReset() {
+    this.nextNumber = null;
+    this.chartData = [];
+    this.lineChartComponent.onReset();
   }
-
-
 }
 
