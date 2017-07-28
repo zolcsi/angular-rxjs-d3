@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import { NumberService } from './shared/number.service';
 import { LineChartComponent } from './line-chart/line-chart.component';
 import { LineChartService } from './line-chart/line-chart.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MdCardModule } from '@angular/material';
 
 
 @NgModule({
@@ -13,7 +15,9 @@ import { LineChartService } from './line-chart/line-chart.service';
     LineChartComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    BrowserAnimationsModule,
+    MdCardModule
   ],
   providers: [
     LineChartService,

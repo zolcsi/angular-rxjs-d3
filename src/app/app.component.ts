@@ -1,5 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import { LineChartComponent } from './line-chart/line-chart.component';
+import { MdCard } from '@angular/material';
 
 @Component({
   selector: 'app-root',
